@@ -1,30 +1,257 @@
+/* Importing webfonts */
+
+@import url(https://fonts.googleapis.com/css?family=Yeseva+One);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700italic,400italic);
+
+
+/* CSS reset rules */
+
+html, body {
+	height: 100%;
+	min-height: 100%;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Fonts and colors */
+
+body {
+	font-family: 'Avenir', serif;
+	color: rgba(0, 0, 0, 0.8);
+	line-height: 1.7em;
+}
+h1, h2, h3, h4, h5, h6, header {
+	font-family: 'Avenir';
+    font-weight: 100;
+    letter-spacing: -1px;
+}
+
+aside {
+	background: #FAFAFA;
+}
+
+aside p {
+/*	border: 1px solid #bbb;*/
+	/*background: #ddd;*/
+	color: black;
+	height: 2000px;
+
+}
+
+footer a {
+	color: rgba(0, 0, 0, 0.8);
+}
+a {
+	color: #262626;
+	font-size: 22px;
+}
+
+
+/* Positioning and margins */
+
+@media (min-width: 1100px) {
+	body {
+		width: 1100px;
+		margin: 0 auto;
+	}
+}
+
+article {
+	padding: 30px 15px;
+}
+
+article > *:first-child {
+}
+
+aside {
+	padding: 50px 15px;
+}
+
+/* Aside */
+
+aside p {
+	border-radius: 10px;
+	padding: 20px 20px;
+}
+
+
+/* Footer */
+
+footer {
+	padding: 5px 15px;
+	height: 80px;
+}
+
+
+/* Text styles and margins */
+
+p {
+	margin-bottom: 15px;
+}
+
+h1 {
+	font-size: 36px;
+	padding: 30px 0 10px;
+}
+
+h2 {
+	font-size: 28px;
+    margin: 0;
+    padding: 10px 0 50px;
+}
+
+h3 {
+	font-size: 28px;
+	margin: 25px 0 10px;
+	padding: 50px 0 25px;
+}
+
+h4 {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 20px 0 10px;
+}
+
+h5 {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 15px 0 10px;
+}
+
+h6 {
+	font-weight: bold;
+	margin: 5px 0;
+}
+
+@media (max-width: 800px) {
+  body.works_on_smartphone {
+  	display: block;
+  }
+
+  body.works_on_smartphone main {
+  	display: block;
+  }
+
+  header .right {
+  	float: none;
+  }
+}
+
+/* image JS challenge */
+
+img {
+	max-width: 100%;
+}
+
+img.small {
+	width: 100px;
+}
+
+
+/* Mine! */
+
+
 .bodyContainer {
 	display: flex;
 	flex-direction: column;
+	background-color: #fff;
 }
 
 .mainContainer {
 	display: flex;
 	flex-direction: row;
+	flew-wrap: wrap;
 	flex: auto;
+	height: 100%;
+	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.12), 0px 0px 0px 0px rgba(0,0,0,0.24);
 }
 
 .headBox {
-	background-color: yellow;
+	background-color: #F2F2ED;
+	/*position: fixed; */ /*I have decided to not have the headBox fixed because by fixing it my links won't be flexible anymore.*/
+    padding: 20px 0;
+	height: 80px;
+	box-shadow: 0 2px 0 rgba(0,0,0,0.12), 0 1px 0px rgba(0,0,0,0.18);
+}
+
+.ulBox {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start space-around;
+	list-style: none;
+	max-width: 62%;
+	margin-top: 50px;
+	padding-left: 10px;
+}
+
+.liFlex {
+            text-align:center;
+            color: white;
+        }
+
+li a {
+	text-decoration: none;
 }
 
 .articleBox {
-	background-color: green;
+	background-color: #FCFCF7;
 	flex: 2;
-	overflow-y: auto;
+	overflow-y: scroll;
+	margin-top: 1px;
 }
 
 .sideBox {
 	flex: 1;
-	overflow-y: auto;
-	background-color: blue;
+	background-color: #FCFCF7;
+	overflow-y: scroll;
+	margin-top: 1px;
+	margin-left: 1px;
 }
 
 .footBox {
-	background-color: purple;
+	background-color: #F2F2ED;
+	margin-top: 1px;
 }
+
+
+
