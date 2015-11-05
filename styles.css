@@ -1,0 +1,24 @@
+.container {
+	display: flex;
+	background-color: silver;
+	flex-direction: row;
+}
+
+.headBox {
+	background-color: yellow;
+	margin-top: 0;
+}
+
+.articleBox {
+	background-color: green;
+	width: 66%;
+}
+
+.sideBox {
+	width: 34%;
+	background-color: blue;
+}
+
+.footBox {
+	background-color: purple;
+}
