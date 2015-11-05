@@ -1,21 +1,27 @@
-.container {
+.bodyContainer {
 	display: flex;
-	background-color: silver;
+	flex-direction: column;
+}
+
+.mainContainer {
+	display: flex;
 	flex-direction: row;
+	flex: auto;
 }
 
 .headBox {
 	background-color: yellow;
-	margin-top: 0;
 }
 
 .articleBox {
 	background-color: green;
-	width: 66%;
+	flex: 2;
+	overflow-y: auto;
 }
 
 .sideBox {
-	width: 34%;
+	flex: 1;
+	overflow-y: auto;
 	background-color: blue;
 }
 
