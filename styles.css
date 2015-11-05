@@ -82,7 +82,7 @@ footer a {
 }
 a {
 	color: #262626;
-	font-size: 22px;
+	font-size: 18px;
 }
 
 
@@ -216,18 +216,25 @@ img.small {
 .ulBox {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: flex-start space-around;
+	justify-content: center space-between;
 	list-style: none;
-	max-width: 62%;
+	max-width: 65%;
 	margin-top: 50px;
-	padding-left: 10px;
+	padding-left: 5px;
 }
 
 .liFlex {
-            text-align:center;
-            color: white;
-        }
+	background: #FCFCF7;
+ 	border-radius: 3px;
+ 	height: 30px;
+	width: 220px;
+	margin-top: 20px;
+	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12);
+    text-align:center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 
 li a {
 	text-decoration: none;
