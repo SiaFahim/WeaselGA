@@ -191,9 +191,15 @@ img.small {
 
 
 .bodyContainer {
-	display: flex;
-	flex-direction: column;
-	background-color: #fff;
+	background-image: url("http://cdn.zmescience.com/wp-content/uploads/2015/06/robot.jpg");
+    background-size: 213px 120px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 89%;
+    background-position-y: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
 }
 
 .mainContainer {
@@ -206,7 +212,7 @@ img.small {
 }
 
 .headBox {
-	background-color: #F2F2ED;
+    background-color: rgba(242, 242, 237, 0.19);
 	/*position: fixed; */ /*I have decided to not have the headBox fixed because by fixing it my links won't be flexible anymore.*/
     padding: 20px 0;
 	height: 80px;
