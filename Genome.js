@@ -3,6 +3,8 @@
 var TARGET="METHINKS IT IS LIKE A WEASEL";
 var ALPHABET = "ABCDEFGHIJKLMONPQRSTUVWXYZ ";
 var MUT_PROB = 10;
+var pool = [];
+var genNum = 0;
 
 var generateGenome = function(){
     var genome = [];
@@ -22,12 +24,11 @@ var getFitness = function(genome){
     return fitness;
 }; 
 
-var genome = generateGenome();
 
-var getGenePool = function(genome){
+var getRandomGenePool = function(){
     var pool = [];
     for (var i=0; i<50;++i){
-        pool[i] = genome;
+        pool[i] = generateGenome()
         console.log(pool);
     }
     return pool;
@@ -48,7 +49,7 @@ var getFittest = function(pool){
 var doMutation = function(genome){
     var newGenome = "";
     for (var i = 0; i < genome.length; ++i){
-        if (Math.floor(Math.random()*MUT_PROB) === 1){
+        if (Math.random()*100 <= MUT_PROB){
             if (genome[i] != TARGET[i]){
                 newGenome += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
             }
@@ -63,27 +64,33 @@ var doMutation = function(genome){
     return newGenome;
 };
 
-var evolve = function(){
-    var numGens = 0;
-    var fittest = generateGenome();
-    console.log(fittest);
-    
-    while (getFitness(fittest) !== 28){
-        numGens++;
-        var pool = getGenePool(fittest);
-        var pool2 = [];
-        for (var i=0; i < pool.length; ++i){
-            pool2[i] = doMutation(pool[i], true)
-        }
-        fittest = getFittest(pool2);
-        if (numGens % 10 === 0){
-            console.log(fittest);
-        }
+var runEveryGeneration = function() {
+    console.log("generation: " + genNum);
+    genNum++;
+    var pool2 = [];
+    for (var i=0; i < pool.length; ++i){
+        pool2[i] = doMutation(pool[i], true)
     }
+    return pool2;
+}
+
+
+var evolve = function(){
+    var fittest = pool[0];
+    // console.log(fittest);
+    while (getFitness(fittest) !== 28){
+        pool = runEveryGeneration();
+        fittest = getFittest(pool);
+        console.log(fittest);
+    }
+
     return fittest;
 };
 
-evolve();
+pool = getRandomGenePool();
+
+console.log (evolve());
+console.log(evolve)
 
 
 
