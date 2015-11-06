@@ -212,7 +212,7 @@ img.small {
 }
 
 .headBox {
-    background-color: rgba(242, 242, 237, 0.19);
+    background-color: rgba(189, 189, 189, 0.25);
 	/*position: fixed; */ /*I have decided to not have the headBox fixed because by fixing it my links won't be flexible anymore.*/
     padding: 20px 0;
 	height: 80px;
