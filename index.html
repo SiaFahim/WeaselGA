@@ -6,6 +6,7 @@
   		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   		<!-- <link href="https://www.holbertonschool.com/level2/holberton.css" rel="stylesheet"> -->
   		<link rel="stylesheet" type="text/css" href="styles.css">
+  		<script src="behavior.js"></script>
   		<title>Genetic Algorythms</title>
  	</head>
 
@@ -25,11 +26,15 @@
 		<article class = "articleBox">
 
 					<header>
+
 					<h1>Genetic Algorythm</h1>
 					<h2>a toy project</h2>
+					<img src="http://goo.gl/eM5iFJ" class="small" id="smart_thumbnail">
 					</header>
 							
 					<p>Genetic algorithms are inspired by nature and evolution, which is seriously cool to me. It’s no surprise, either, that artificial neural networks (“NN”) are also modeled from biology: evolution is the best general-purpose learning algorithm we’ve experienced, and the brain is the best general-purpose problem solver we know. These are two very important pieces of our biological existence, and also two rapidly growing fields of artificial intelligence and machine learning study. While I’m tempted to talk more about the distinction I make between the GA’s “learning algorithm” and the NN’s “problem solver” terminology, we’ll drop the topic of NNs altogether and concentrate on GAs… for now.</p>
+
+
 
 					<h3>Genetic Algorithm Basics</h3>
 
@@ -82,8 +87,28 @@
 
 
 		<aside class = "sideBox">
-				<h2>Side Box</h2>
-				<p>This is a side box and it will have some cool stuff in it soon.</p>
+				<div id="disqus_thread"></div>
+				<script>
+					/**
+					* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+					* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+					*/
+					/*
+					var disqus_config = function () {
+					this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+					this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+					};
+					*/
+					(function() { // DON'T EDIT BELOW THIS LINE
+					var d = document, s = d.createElement('script');
+
+					s.src = '//smartrobot.disqus.com/embed.js';
+
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+					})();
+				</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 		</aside>
 	</main>
 
@@ -95,7 +120,11 @@
 		</p>
 	</footer>
 
+<script id="dsq-count-scr" src="//smartrobot.disqus.com/count.js" async></script>
+
 </body>
+
+
 <!-- script for the widget to show social stuff-->
 <script>
   (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);

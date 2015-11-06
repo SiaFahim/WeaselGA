@@ -184,6 +184,7 @@ img {
 
 img.small {
 	width: 100px;
+	overflow: auto;
 }
 
 
@@ -192,7 +193,7 @@ img.small {
 
 .bodyContainer {
 	background-image: url("http://cdn.zmescience.com/wp-content/uploads/2015/06/robot.jpg");
-    background-size: 213px 120px;
+    background-size: auto 120px;
     background-repeat: no-repeat;
     background-position: right;
     background-position-x: 89%;
@@ -217,6 +218,15 @@ img.small {
     padding: 20px 0;
 	height: 80px;
 	box-shadow: 0 2px 0 rgba(0,0,0,0.12), 0 1px 0px rgba(0,0,0,0.18);
+}
+
+.headBox img {
+	position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
 }
 
 .ulBox {
