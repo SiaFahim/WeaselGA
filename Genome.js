@@ -1,6 +1,7 @@
 //this algorythm does not have the Mating (crossover) in it, it will work more efficiently by adding crossover function.
  
 var TARGET = "METHINKS IT IS LIKE A WEASEL";
+             // "BE THE CHANGE YOU WISH TO SEE IN THE WORLD!"
 var ALPHABET = "ABCDEFGHIJKLMONPQRSTUVWXYZ ";
 var MUT_PROB =1;
 var pool = [];
@@ -34,7 +35,7 @@ var getRandomGenePool = function(){
     return pool;
 };
 
-var getFittest = function(pool){`
+var getFittest = function(pool){
     var fittestLoc = 0;
     var fittest = 0;
     for (var i=0; i<pool.length;++i){
