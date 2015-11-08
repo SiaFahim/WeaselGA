@@ -198,20 +198,19 @@ img.small {
 .bodyContainer {
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #FFFFFF;
 }
 
 .mainContainer {
 	display: flex;
 	flex-direction: row;
 	flew-wrap: wrap;
-	flex: auto;
 	height: 100%;
 	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.12), 0px 0px 0px 0px rgba(0,0,0,0.24);
 }
 
 .headBox {
-    /* background-color: rgba(189, 189, 189, 0.25); */
+    background-color: #FFFFFF; 
     /* position: fixed; */
     background-image: url("http://cdn.zmescience.com/wp-content/uploads/2015/06/robot.jpg");
     background-size: auto 83px;
@@ -220,15 +219,6 @@ img.small {
     padding: 0 1px 44px 0;
     height: 80px;
     box-shadow: 0 2px 0 rgba(0,0,0,0.12), 0 1px 0px rgba(0,0,0,0.18);
-}
-
-.headBox img {
-	position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-    opacity: 0.6;
 }
 
 .ulBox {
