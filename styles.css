@@ -134,7 +134,7 @@ h1 {
 }
 
 #title {
-	padding: 13px 0 0 10px;
+	padding: 40px 0 0 10px;
 }
 
 h2 {
@@ -196,12 +196,6 @@ img.small {
 
 
 .bodyContainer {
-	background-image: url("http://cdn.zmescience.com/wp-content/uploads/2015/06/robot.jpg");
-    background-size: auto 120px;
-    background-repeat: no-repeat;
-    background-position: right;
-    background-position-x: 89%;
-    background-position-y: 0;
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -217,11 +211,15 @@ img.small {
 }
 
 .headBox {
-    /*background-color: rgba(189, 189, 189, 0.25);*/ /* I like it white :) */
-	/*position: fixed; */ /*I have decided to not have the headBox fixed because by fixing it my links won't be flexible anymore.*/
-    padding: 20px 0;
-	height: 80px;
-	box-shadow: 0 2px 0 rgba(0,0,0,0.12), 0 1px 0px rgba(0,0,0,0.18);
+    /* background-color: rgba(189, 189, 189, 0.25); */
+    /* position: fixed; */
+    background-image: url("http://cdn.zmescience.com/wp-content/uploads/2015/06/robot.jpg");
+    background-size: auto 83px;
+    background-repeat: no-repeat;
+    background-position: right 7px;
+    padding: 0 1px 44px 0;
+    height: 80px;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.12), 0 1px 0px rgba(0,0,0,0.18);
 }
 
 .headBox img {
@@ -234,42 +232,20 @@ img.small {
 }
 
 .ulBox {
-	display: flex;
-	flex-direction: row;
-	justify-content: center space-between;
-	list-style: none;
-	max-width: 65%;
-	margin-top: 8px;
-	padding-left: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    width: 100%;
+    margin-top: 5px;
+    padding: 0px 1px 1px 1px;
 }
 
 .liFlex {
 	background: #FCFCF7;
  	border-radius: 3px;
  	height: 30px;
-	width: 220px;
-	margin-top: 20px;
-	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12);
-    text-align:center;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.ulBoxAbout {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	list-style: none;
-	/*max-width: 65%;*/
-	margin-top: 50px;
-	padding-left: 1px;
-}
-
-.liFlex1 {
-	background: #FCFCF7;
- 	border-radius: 3px;
- 	height: 30px;
-	width: 220px;
+	width: 100%;
 	margin-top: 20px;
 	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12);
     text-align:center;
@@ -289,7 +265,7 @@ li a {
 }
 
 .sideBox {
-	flex: 1;
+	flex: 0.96; /* Iset the flex value to 0.96 to align the aside box with the menue box on top of in the header. they both accupy 1/3 of the space but the menue box has padding*/
 	background-color: #FCFCF7;
 	overflow-y: scroll;
 	margin-top: 1px;
