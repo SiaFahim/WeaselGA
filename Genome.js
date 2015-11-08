@@ -1,8 +1,8 @@
 //this algorythm does not have the Mating (crossover) in it, it will work more efficiently by adding crossover function.
  
-var TARGET="METHINKS IT IS LIKE A WEASEL";
+var TARGET = "METHINKS IT IS LIKE A WEASEL";
 var ALPHABET = "ABCDEFGHIJKLMONPQRSTUVWXYZ ";
-var MUT_PROB = 10;
+var MUT_PROB =1;
 var pool = [];
 var genNum = 0;
 
@@ -34,7 +34,7 @@ var getRandomGenePool = function(){
     return pool;
 };
 
-var getFittest = function(pool){
+var getFittest = function(pool){`
     var fittestLoc = 0;
     var fittest = 0;
     for (var i=0; i<pool.length;++i){
@@ -77,7 +77,6 @@ var runEveryGeneration = function() {
 
 var evolve = function(){
     var fittest = pool[0];
-    // console.log(fittest);
     while (getFitness(fittest) !== 28){
         pool = runEveryGeneration();
         fittest = getFittest(pool);
@@ -90,7 +89,6 @@ var evolve = function(){
 pool = getRandomGenePool();
 
 console.log (evolve());
-console.log(evolve)
 
 
 
