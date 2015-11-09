@@ -1,4 +1,4 @@
-var TARGET = prompt ("Say something!" , "Hellow World :)");
+var TARGET = prompt ("Say something!" , "Hello World :)");
 var POP_SIZE = 100; //population size.
 var POP_SIZE_GROWTH_RATIO = 1;
 var SURVIVAL_RATIO = 0.7;
