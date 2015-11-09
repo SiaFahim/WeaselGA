@@ -2,7 +2,7 @@ var TARGET = prompt ("Say something!" , "Just Killin it :)");
 var POP_SIZE = 100; //population size.
 var POP_SIZE_GROWTH_RATIO = 1;
 var SURVIVAL_RATIO = 0.7;
-var MUT_PROB = 0.05;
+var MUT_PROB = 0.1;
 var GENE_MUT_PROB = 0.3;
 var SURVIVED_POP_SIZE = Math.floor((SURVIVAL_RATIO*POP_SIZE));
 var CHARACTERS = [96, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 45, 61, 113, 119, 101, 114, 116, 121, 117, 
@@ -11,7 +11,7 @@ var CHARACTERS = [96, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 45, 61, 113, 119, 
 				80, 123, 125, 124, 65, 83, 68, 70, 71, 72, 74, 75, 76, 58, 34, 90, 88, 67, 86, 66, 78, 77, 60, 62, 63];
 var THE_ANSWER = [];
 var genNum = 0;
-var END_FACTOR = 100000;
+var END_FACTOR = 200000;
 var fittestLoc = 0;
 
 
@@ -29,7 +29,7 @@ var genomeToAnswer = function(genome){
 	for (var i=0; i<genome.length;++i){
 		answer[i] = String.fromCharCode(genome[i]);
 	}
-	return answer.toString();
+	return answer.join('');
 };
 
 var generateRanGenome = function(){
@@ -154,6 +154,7 @@ var evolve = function(){
 		getTheFittest(pop);
 		++genNum;
 	}
+	console.log("I'm pretty sure you said", genomeToAnswer(pop[fittestLoc].Genome));
 };
 
 evolve();
