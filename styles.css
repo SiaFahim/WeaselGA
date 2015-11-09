@@ -194,14 +194,12 @@ img.small {
 
 .headBox {
 	display: flex;
-	flex: column;
 	justify-content: flex-start;
     background-color: #FFFFFF; 
     background-image: url("RoboHead.png");
     background-size: auto 110px;
     background-repeat: no-repeat;
-    background-position: 98% 20px;
-    height: 200px;
+    background-position: 98% 13px;
     box-shadow: 0 2px 0 rgba(0,0,0,0.12), 0 1px 0px rgba(0,0,0,0.18);
 }
 
@@ -210,11 +208,10 @@ img.small {
     flex-direction: column;
     list-style: none;
     padding-left: 220px;
-    padding-top: 32px;
+    padding-top: 18px;
 }
 
 .liFlex {
-	max-width: 300px;
 }
 
 li a {
@@ -228,7 +225,8 @@ li a {
 	margin-top: 2px;
 	padding-left: 60px;
 	padding-right: 60px;
-	padding-top: 35px;
+	padding-top: 20px;
+	padding-bottom: 200px;
 }
 
 .sideBox {
