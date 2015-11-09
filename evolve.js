@@ -150,7 +150,6 @@ var evolve = function(){
 		if (genNum > END_FACTOR) {
 			break;
 		}
-		console.log(genNum, END_FACTOR)
 		makeGeneration();
 		getTheFittest(pop);
 		++genNum;
