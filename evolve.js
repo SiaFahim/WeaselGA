@@ -1,10 +1,18 @@
-var TARGET = prompt ("Say something!" , "Hello, World :)");
-var CHARACTERS = [96, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 45, 61, 113, 119, 101, 114, 116, 121, 117, 105, 111, 112, 91, 93, 92, 97, 115, 100, 102, 103, 104, 106, 107, 108, 59, 39, 122, 120, 99, 118, 98, 110, 109, 44, 46, 47, 32, 126, 33, 64, 35, 36, 37, 94, 38, 42, 40, 41, 95, 43, 81, 87, 69, 82, 84, 89, 85, 73, 79, 80, 123, 125, 124, 65, 83, 68, 70, 71, 72, 74, 75, 76, 58, 34, 90, 88, 67, 86, 66, 78, 77, 60, 62, 63];
+var TARGET = prompt ("Say something!" , "Just Killin it :)");
 var POP_SIZE = 100; //population size.
-var SURVIVAL_RATIO = 30;
-var MUT_RATIO = 5;
-var MUT_STRENGTH = 1;
-var SURVIVED_POP_SIZE = Math.floor((SURVIVAL_RATIO / POP_SIZE) * 100);
+var POP_SIZE_GROWTH_RATIO = 1;
+var SURVIVAL_RATIO = 0.7;
+var MUT_PROB = 0.05;
+var GENE_MUT_PROB = 0.3;
+var SURVIVED_POP_SIZE = Math.floor((SURVIVAL_RATIO*POP_SIZE));
+var CHARACTERS = [96, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 45, 61, 113, 119, 101, 114, 116, 121, 117, 
+				105, 111, 112, 91, 93, 92, 97, 115, 100, 102, 103, 104, 106, 107, 108, 59, 39, 122, 120, 99, 118, 98, 110, 
+				109, 44, 46, 47, 32, 126, 33, 64, 35, 36, 37, 94, 38, 42, 40, 41, 95, 43, 81, 87, 69, 82, 84, 89, 85, 73, 79, 
+				80, 123, 125, 124, 65, 83, 68, 70, 71, 72, 74, 75, 76, 58, 34, 90, 88, 67, 86, 66, 78, 77, 60, 62, 63];
+var THE_ANSWER = [];
+var genNum = 0;
+var END_FACTOR = 100000;
+var fittestLoc = 0;
 
 
 var getStrUniCode = function() {
@@ -16,92 +24,137 @@ var getStrUniCode = function() {
 };
 var targetCharCode = getStrUniCode();
 
-var generateGenome = function(){
+var genomeToAnswer = function(genome){
+	var answer = [];
+	for (var i=0; i<genome.length;++i){
+		answer[i] = String.fromCharCode(genome[i]);
+	}
+	return answer.toString();
+};
+
+var generateRanGenome = function(){
 	var genome =[];
-	for (var i=0; i<TARGET.length;++i){
+	for (var i=0; i<targetCharCode.length;++i){
 		genome[i] = CHARACTERS[Math.floor(Math.random()*CHARACTERS.length)];
 	};
 	return genome;
 };
 
+var getFitness = function(genome){
+	var fitness = 0;
+	for (var i=0; i<targetCharCode.length;++i){
+		if (genome[i] === targetCharCode[i]){
+			fitness++;
+		}
+	}
+	return fitness;
+};
+
 var genRandomPop = function(){
-	var localPop = [];
+	var pop =[];
 	for (var i=0; i<POP_SIZE;++i){
-		localPop[i] = generateGenome();
-	};
-	return localPop;
+		var genome = generateRanGenome();
+		var fitness = getFitness(genome);
+		parentObject = {
+			Genome: genome,
+			Fitness: fitness
+		}
+		pop.push(parentObject);
+	}
+	return pop;
 };
 var pop = genRandomPop();
 
-var getFitness = function(genome){
-    var fitness=0;
-    for (var i=0; i<TARGET.length;++i){
-        if (genome[i]===targetCharCode[i]){
-            fitness++;
-        }
-    }
-    return fitness;
-}; 
+var brainWash = function(child){
+	var fitness = 0;
+	fitness = getFitness(child);
+	childObject = {
+		Genome: child,
+		Fitness: fitness,
+		leftChrom: splitGenome(child).leftChrom,
+		rightChrom: splitGenome(child).rightChroms
+	}
+	return childObject;
+};
 
-var scorePop = function(){
-	var scoredPop = [];
+var splitGenome = function(genome){
+	var middle = Math.floor(genome.length/2);
+	var splitedGenome = {
+			leftChrom: genome.slice(0,middle),
+			rightChrom: genome.slice(middle)
+	};
+	return splitedGenome;
+};
+
+var getBusy = function(){
+	var lParent = pop[Math.floor(Math.random()*pop.length)].leftChrom;
+	var rParent = pop[Math.floor(Math.random()*pop.length)].rightChrom;
+	var offSpring = lParent.concat(rParent);
+	return offSpring;
+};
+
+var mutateGenes = function(genome){
+	// do the following between 0 and (some num < TARGET.length) times
+	var howManyToMutate = TARGET.length*GENE_MUT_PROB;
+	for (var i=0; i<howManyToMutate;++i){
+		genome[Math.floor(Math.random()*genome.length)] = CHARACTERS[Math.floor(Math.random()*CHARACTERS.length)];
+	}
+};
+
+var mutatePop = function(){
+	var howManyToMutate = POP_SIZE*MUT_PROB
+	for (var i=0; i<howManyToMutate;++i){
+		var toMutate = pop[Math.floor(Math.random()*pop.length)].Genome
+		mutateGenes(toMutate);
+	}
+};
+
+var kill = function(){
+	pop = pop.slice(0, SURVIVED_POP_SIZE);
+	return pop;
+};
+
+var makeGeneration = function(){
+	var newPop =[];
+	var offSpring = [];
+	pop.sort(function(a,b){return b.Fitness-a.Fitness});
+	console.log("The best of generation", genNum, "is", genomeToAnswer(pop[fittestLoc].Genome), "with fitness of", pop[fittestLoc].Fitness);
+	kill();
+	mutatePop();
+	for (var i=0; i<pop.length;++i){
+		pop[i].leftChrom = splitGenome(pop[i].Genome).leftChrom;
+		pop[i].rightChrom = splitGenome(pop[i].Genome).rightChrom;
+	};
 	for (var i=0; i<POP_SIZE;++i){
-		scoredPop[i] = {
-			genome: pop[i],
-			fitness: getFitness(pop[i])
+		var j = i % pop.length;
+		offSpring = getBusy()
+		newPop.push(brainWash(offSpring));
+	};
+	pop = newPop;
+};
+
+var getTheFittest = function(fittest){
+	for (var i=0; i<pop.length; ++i){
+		if (fittest[i].Fitness === TARGET.length){
+		THE_ANSWER = fittest[i].Genome;
+		fittestLoc = i;
+		return fittestLoc;
 		}
 	}
-	return scoredPop;
-};
-var scoredPop = scorePop();
-
-var sortPop = function(){
-	var sortedPop = scoredPop.sort(function(a,b)
-	{return b.fitness - a.fitness});
-	return sortedPop;
-};
-var sortedPop = sortPop();
-
-var kill = function(sortedPop){
-	var survivedPop = sortedPop.slice(0,SURVIVED_POP_SIZE);
-	return survivedPop;
-};
-var survivedPop = kill(sortedPop);
-
-// var doMutateGene = function()
-
-// var doMutateGenome = function()
-
-var splitGenome = function(survivor){
-	var genome = survivor.genome;
-	var middle = Math.floor(genome.length/2);
-	survivor.leftChrom = genome.slice(0,middle);
-	survivor.rightChrom = genome.slice((middle), (genome.length));	
-	return survivor;
+	return THE_ANSWER;
 };
 
-for (var i=0; i<survivedPop.length;++i){
-	splitGenome(survivedPop[i]);
+var evolve = function(){
+	getTheFittest(pop);
+	while (pop[fittestLoc].Fitness < targetCharCode.length) {
+		if (genNum > END_FACTOR) {
+			break;
+		}
+		console.log(genNum, END_FACTOR)
+		makeGeneration();
+		getTheFittest(pop);
+		++genNum;
+	}
 };
 
-console.log(survivedPop);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+evolve();
