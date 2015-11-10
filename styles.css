@@ -1,4 +1,4 @@
-/* CSS reset rules */
+
 
 html, body {
 	height: 100%;
@@ -24,6 +24,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -46,22 +47,26 @@ table {
 }
 
 
+/*Default styles for page elements*/
+
 /* Fonts and colors */
 
 body {
 	font-family: 'Avenir', "Century Gothic", "sans-serif";
 	color: rgba(0, 0, 0, 0.8);
-	line-height: 1.7em;
+	line-height: 1.5em;
 }
+
 h1, h2, h3, h4, h5, h6, header {
 	font-family: 'Avenir', "Century Gothic", "sans-serif";
     font-weight: 100;
-    letter-spacing: -1px;
+    letter-spacing: 1px;
 }
 
 footer a {
 	color: rgba(0, 0, 0, 0.8);
 }
+
 a {
 	color: #262626;
 	font-size: 18px;
@@ -76,47 +81,25 @@ a {
 	}
 }
 
-article > *:first-child {
-}
-
-aside {
-	padding: 50px 15px;
-}
-
-aside p {
-	border-radius: 10px;
-	padding: 20px 20px;
-}
-
-
 /* Footer */
 
 footer {
 	padding: 5px 15px;
-	height: 80px;
+	height: 120px;
 }
 
 
 /* Text styles and margins */
 
-p {
-	margin-bottom: 15px;
-}
 
 h1 {
 	font-size: 36px;
-	padding: 60px 55px;
-	font-weight: 900;
-	line-height: 36px
-}
-
-#title {
-	padding: 32px 20px 0px 60px;
+	padding: 10px 0 50px;
+	font-weight: 100;
 }
 
 h2 {
 	font-size: 28px;
-    margin: 0;
     padding: 10px 0 50px;
 }
 
@@ -152,7 +135,7 @@ h6 {
   	display: block;
   }
 
-  header .right {
+  header.right {
   	float: none;
   }
 }
@@ -168,84 +151,118 @@ img.small {
 	overflow: auto;
 }
 
+/*Special Styling*/
 
-/* Mine! */
-
-
-.bodyContainer {
-    display: flex;
+.bodyContainer{
+	display: flex;
     flex-direction: column;
     background-color: #FFFFFF;
 }
 
-.mainContainer {
+.headContainer{
 	display: flex;
 	flex-direction: row;
-	flew-wrap: wrap;
-	height: 100%;
-	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.12), 0px 0px 0px 0px rgba(0,0,0,0.24);
+	justify-content: space-between;
+	background-color: rgba(245, 245, 245, 0.38);;
+	box-shadow: 0px 2px 6px -1px rgba(0, 0, 0, 0.51);
 }
 
-#sim {
-	display: flex;
-	flex-direction: column;
-	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.12), 0px 0px 0px 0px rgba(0,0,0,0.24);
+.titleBox{
+	flex: 1;
+	padding: 45px 0px 0px 60px;
+}
+.titleBox h1{
+	color: #4B584D;
+	font-weight: 900;
+	font-size: 38px;
+	line-height: 32px;
 }
 
-.headBox {
-	display: flex;
-	justify-content: flex-start;
-    background-color: #FFFFFF; 
-    background-image: url("RoboHead.png");
-    background-size: auto 110px;
-    background-repeat: no-repeat;
-    background-position: 98% 13px;
-    box-shadow: 0px 2px 8px 0px rgba(26, 47, 16, 0.5), 0px 0px 10px 0px rgba(25,25,21,-10.82);
+.ulBox{
+	flex: 1;
+	padding: 35px 35px 0px 163px;
+	list-style: none;
+}
+.ulBox ul{
+	list-style: none;
 }
 
-.ulBox {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding-left: 220px;
-    padding-top: 18px;
-}
-
-.liFlex {
-}
-
-li a {
+.liFlex a {
+	color: #696969;
+	line-height: 0;
+	font-weight: 400;
 	text-decoration: none;
 }
 
-.articleBox {
-	background-color: #FCFCF7;
-	flex: 2;
-	overflow-y: scroll;
-	margin-top: 1px;
-	padding-left: 60px;
-	padding-right: 60px;
-	padding-top: 20px;
-	padding-bottom: 200px;
-}
-
-.sideBox {
+.imageBox{
 	flex: 1;
-	background-color: #FCFCF7;
+	padding: 30px 45px 0px 390px;
+}
+
+.mainContainer{
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	flex-wrap: wrap;
+}
+
+.articleBox{
+	flex: 2;
+	background-color: rgba(247, 247, 247, 0.27);
+    margin-top: 1px;
+    margin-right: 1px;
+    overflow-y: scroll;
+}
+
+#smart_thumbnail{
+	padding: 0px 82px 0px 65px;
+}
+
+.articleBox p{
+	padding: 25px 75px 25px 75px;
+	letter-spacing: 0.5px;
+	line-height: 1.8;
 	overflow-y: scroll;
-	margin-top: 1px;
-	margin-left: 1px;
-	padding: 20px, 20px, 20px, 20px;
 }
 
-#simSide {
-	background-color: #FCFCF7;
+.articleBox h3{
+    padding: 20px 0px 0px 75px;
 }
 
-.footBox {
-	background-color: #F2F2ED;
-	margin-top: 1px;
+#articleTitle{
+	padding: 50px 35px 35px 65px;
 }
+
+.articleBox ul{
+	padding: 10px 0px 10px 100px;
+}
+
+#lastP{
+	padding-bottom: 420px;
+}
+
+.sideBox{
+	flex: 1;
+	background-color: rgba(247, 247, 247, 0.27);
+    margin-top: 1px;
+    margin-left: 1px;
+    overflow-y: scroll;
+}
+
+.sideBox p{
+	padding: 15px 15px 15px 15px;
+}
+
+.disqus_thread{}
+
+.footBox{
+	background-color: #F5F5F5;
+	padding: 32px 75px 32px 75px;
+	margin-top: 2px;
+	margin-bottom: 5px;
+}
+
+
 
 
 

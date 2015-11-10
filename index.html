@@ -4,31 +4,32 @@
 
 	<head>
   		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  		<!-- <link href="https://www.holbertonschool.com/level2/holberton.css" rel="stylesheet"> -->
   		<link rel="stylesheet" type="text/css" href="styles.css">
+  		<link rel="shortcut icon" href="favicon.ico" >
   		<script src="behavior.js"></script>
-  		<title>Genetic Algorythms</title>
+  		<title>GA</title>
  	</head>
 
-<body class= "bodyContainer" class="works_on_smartphone">
+ 	<body class= "bodyContainer" class="works_on_smartphone">
+		<header class = "headContainer">
+			<div class="titleBox"><h1>genetic<br>algorithm</h1></div>
+			<div class="ulBox">
+				<ul>
+					<li class="liFlex"><a href="index.html">Home</a></li>
+					<li class="liFlex"><a href="code.html">Code</a></li>
+					<li class="liFlex"><a href="sim.html">Simulator</a></li>
+				</ul></div>	
+			<div class="imageBox"><img src="RoboHead.png" alt="Smiley face" height="110" width="130"></div>
+		</header>
 
-	<header class = "headBox">
-		<h1 id="title">genetic<br>algorithm</h1>
-		<ul class="ulBox">
-			<li class="liFlex"><a href="index.html">Algorithm</a></li>
-			<li class="liFlex"><a href="code.html">Code</a></li>
-			<li class="liFlex"><a href="simulator.html">Simulator</a></li>
-		</ul>
-	</header>
-
-	<main class="mainContainer">
-		<article class = "articleBox">
-
-					<header>
-					<h2></h2>
-					<img src="http://goo.gl/eM5iFJ" class="" id="smart_thumbnail"> <!-- I set the initial value of class for this img tag to "" so at first it shows the full image which looks kind of nicer to the webpage -->
-					</header>
-							
+		<main class="mainContainer">
+			<article class = "articleBox">
+				<header>
+					<h3 id="articleTitle">Natural Selection in Machine Learning</h3>
+					<img src="http://goo.gl/eM5iFJ" class="small" id="smart_thumbnail" height="80%" width="80%"> 
+				</header>
+				
+				<div id="content">		
 					<p>Genetic algorithms are inspired by nature and evolution, which is seriously cool to me. It’s no surprise, either, that artificial neural networks (“NN”) are also modeled from biology: evolution is the best general-purpose learning algorithm we’ve experienced, and the brain is the best general-purpose problem solver we know. These are two very important pieces of our biological existence, and also two rapidly growing fields of artificial intelligence and machine learning study. While I’m tempted to talk more about the distinction I make between the GA’s “learning algorithm” and the NN’s “problem solver” terminology, we’ll drop the topic of NNs altogether and concentrate on GAs… for now.</p>
 
 
@@ -79,54 +80,43 @@
 
 					<h3>The Population</h3>
 
-					<p>The population is a group of chromosomes. The population generally remains the same size but will typically evolve to better average cost scores over time. You get to choose your population size. I picked 20 for mine below, but you could choose 10 or 100 or 10,000 if you want. There are advantages and disadvantages</p>	
-		</article>
+					<p id="lastP">The population is a group of chromosomes. The population generally remains the same size but will typically evolve to better average cost scores over time. You get to choose your population size. I picked 20 for mine below, but you could choose 10 or 100 or 10,000 if you want. There are advantages and disadvantages</p>
+				</div>	
+			</article>
 
-		<aside class = "sideBox">
-				<div id="disqus_thread"></div>
-				<script>
-					/**
-					* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-					* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-					*/
-					/*
-					var disqus_config = function () {
-					this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-					this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-					};
-					*/
-					(function() { // DON'T EDIT BELOW THIS LINE
-					var d = document, s = d.createElement('script');
+			<aside class = "sideBox">
+					<div id="disqus_thread">
+						<script>
+							(function() { // DON'T EDIT BELOW THIS LINE
+							var d = document, s = d.createElement('script');
 
-					s.src = '//smartrobot.disqus.com/embed.js';
+							s.src = '//smartrobot.disqus.com/embed.js';
 
-					s.setAttribute('data-timestamp', +new Date());
-					(d.head || d.body).appendChild(s);
-					})();
-				</script>
-				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-		</aside>
+							s.setAttribute('data-timestamp', +new Date());
+							(d.head || d.body).appendChild(s);
+							})();
+						</script>
+						<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+					</div>
+			</aside>
+		</main>
 
-	</main>
+		<footer class = "footBox">
+			<p>
+		  			Made by <a href="https://twitter.com/SiaFahim" target="_blank">Siavash Fahimi</a> for 
+		  			<a href="https://www.holbertonschool.com" target="_blank">Holberton School</a>.
+		  			<img src="https://www.holbertonschool.com/holberton-logo.png" height="42" width="100">
+			</p>
+		</footer>
 
-	<footer class = "footBox">
-		<p>
-	  			Made by <a href="https://twitter.com/SiaFahim" target="_blank">Siavash Fahimi</a> for 
-	  			<a href="https://www.holbertonschool.com" target="_blank">Holberton School</a>.
-	  			<img src="https://www.holbertonschool.com/holberton-logo.png" height="42" width="100">
-		</p>
-	</footer>
+		<script id="dsq-count-scr" src="//smartrobot.disqus.com/count.js" async></script>
+	</body>
 
-<script id="dsq-count-scr" src="//smartrobot.disqus.com/count.js" async></script>
+	<!-- script for the widget to show social stuff-->
+	<script>
+	  (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
+	    t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
+	  })(window, document, '_gscq','script','//widgets.getsitecontrol.com/28662/script.js');
+	</script>
 
-</body>
-
-
-<!-- script for the widget to show social stuff-->
-<script>
-  (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
-    t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
-  })(window, document, '_gscq','script','//widgets.getsitecontrol.com/28662/script.js');
-</script>
-
-</html>
+ </html>
