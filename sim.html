@@ -5,7 +5,10 @@
   		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   		<link rel="stylesheet" type="text/css" href="styles.css">
   		<link rel="shortcut icon" href="favicon.ico" >
-  		<script src="behavior.js"></script>
+			<script src="jquery-2.1.4.js"></script>
+			<script src="evolve.js"></script>
+			<script src="jquery_functions.js"></script>
+
   		<title>GA</title>
  	</head>
 
@@ -24,31 +27,30 @@
 		</header>
 
 		<main class="sim">
-
 				<div id="simHead">
 					<h3>Sit tight! Some cool stuff is going to happen here :)</h3>
 				</div>
 
-				<div id="msg">
+				<!-- <div id="msg">
 					<p>Type anything you like</p>
-				</div>
+				</div> -->
 
-				<div id="textBox">
+				<!-- <div id="textBox">
 					<input size="80" id="userIn" type="text" name="sentense">
-				</div>
+				</div> -->
 
 				<div class="result">
-					<h3>result</h3>
+					<h3 id="possibleAnswers"></h3>
 				</div>
 
 				<div id="genNumCost">
 
-					<div id="numOfGen">
-						<p>3425767</p>
+					<div>
+						<p>Number of generations:</p><p id="numOfGen"></p>
 					</div>
 
-					<div id="cost">
-						<p>03</p>
+					<div id="costDiv">
+						<p>Cost value:</p> <p id="cost"></p>
 					</div>
 
 				</div>

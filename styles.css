@@ -104,8 +104,8 @@ h2 {
 
 h3 {
 	font-size: 28px;
-	margin: 25px 0 10px;
-	padding: 50px 0 25px;
+	margin: 25px 0 0 10px;
+	/*padding: 50px 0 25px;*/
 }
 
 h4 {
@@ -288,20 +288,20 @@ img.small {
 }
 .result{
 	width: 75%;
-	height: 40px;
-	background-color: rgba(243, 243, 243, 0.1);
+	height: 75px;
+	background-color: rgba(185, 255, 219, 0.15);
 	margin: 0 auto;
-	padding: 50px 0px 50px 0px;
-	box-shadow: 0px 0px 3px 0px;
-	border-radius: 5px;
+	/*padding: 0px 0px 40px 0px;*/
+	/*box-shadow: 0px 0px 3px 0px;*/
+	border-radius: 10px;
 }
 
 .result h3{
 	text-align: center;
 	vertical-align: middle;
-	font-size: 36px;
-	margin: 0;
-  padding: 0;
+	font-size: 32px;
+	/*margin: 0;*/
+	/*padding-bottom: 55px;*/
 }
 
 #genNumCost{
@@ -311,7 +311,7 @@ img.small {
 	flex-direction: row;
 	padding-top: 5px;
 }
-#cost{
+#costDiv{
 	flex: 1;
 	/*background-color: rgba(252, 255, 232, 0.39);;*/
 	align-self: flex-end;
@@ -328,11 +328,11 @@ img.small {
 	justify-content: center;
 	background-color: rgb(61, 193, 85);
 	width: 20%;
-	border-radius: 10px;
-	box-shadow:  0px 6px 20px -1px;
+	border-radius: 5px;
+	box-shadow:  0px 1px 5px 0px;
 	margin: 0 auto;
 	margin-top: 25px;
-	margin-bottom: 200px;
+	margin-bottom: 30px;
 }
 #run h3{
 	padding: 25px 35px 25px 35px;
