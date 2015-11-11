@@ -304,6 +304,7 @@ img.small {
 	vertical-align: middle;
 	font-size: 32px;
 	line-height: 1.5;
+	font-weight: 600;
 	/*margin: 0;*/
 	/*padding-bottom: 55px;*/
 }
@@ -344,4 +345,9 @@ img.small {
 #run h3{
 	padding: 25px 35px 25px 35px;
 	margin: 0 auto;
+}
+
+#temp{
+	padding: 25px 135px 0px 135px;
+	text-align: justify;
 }
