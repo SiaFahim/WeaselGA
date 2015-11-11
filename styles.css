@@ -300,6 +300,7 @@ img.small {
 	text-align: center;
 	vertical-align: middle;
 	font-size: 32px;
+	line-height: 1.5;
 	/*margin: 0;*/
 	/*padding-bottom: 55px;*/
 }
