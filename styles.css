@@ -219,9 +219,10 @@ img.small {
 
 .articleBox p{
 	padding: 25px 75px 25px 75px;
-	letter-spacing: 0.5px;
-	line-height: 1.8;
+	/*letter-spacing: 0.5px;*/
+	line-height: 1.7;
 	overflow-y: scroll;
+	text-align: justify;
 }
 
 .articleBox h3{
