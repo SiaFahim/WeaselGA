@@ -242,6 +242,8 @@ img.small {
 }
 
 .sideBox{
+	display: flex;
+	flex-direction: column;
 	flex: 1;
 	background-color: rgba(247, 247, 247, 0.27);
     margin-top: 1px;
