@@ -269,7 +269,7 @@ img.small {
 	display: flex;
 	height: 100%;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	overflow-y: scroll;
 	background-color: rgba(247, 247, 247, 0.27);
 }
