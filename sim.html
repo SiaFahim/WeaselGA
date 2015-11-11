@@ -1,83 +1,71 @@
 <!DOCTYPE HTML>
 
 <html>
-
 	<head>
   		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   		<link rel="stylesheet" type="text/css" href="styles.css">
   		<link rel="shortcut icon" href="favicon.ico" >
   		<script src="behavior.js"></script>
-  		<script src="evolve.js"></script>
   		<title>GA</title>
  	</head>
 
- 	<body class= "bodyContainer" class="works_on_smartphone">
+	<body class= "bodyContainer" class="works_on_smartphone">
+
 		<header class = "headContainer">
+
 			<div class="titleBox"><h1>genetic<br>algorithm</h1></div>
 			<div class="ulBox">
 				<ul>
 					<li class="liFlex"><a href="index.html">Home</a></li>
 					<li class="liFlex"><a href="code.html">Code</a></li>
 					<li class="liFlex"><a href="sim.html">Simulator</a></li>
-				</ul></div>	
+				</ul></div>
 			<div class="imageBox"><img src="RoboHead.png" alt="Smiley face" height="110" width="130"></div>
 		</header>
 
-		<main class="mainContainer">
-			<article class = "articleBox">
-				<header>
-					<h3 id="articleTitle">Sit tight! Some cool stuff is going to happen here :)</h3>
-					<img src="http://goo.gl/eM5iFJ" class="small" id="smart_thumbnail" height="80%" width="80%"> 
-				</header>
-				
-				<div id="content">		
-					<p>Open javascript console on your browser to see the result of this GA.</p>
+		<main class="sim">
 
+				<div id="simHead">
+					<h3>Sit tight! Some cool stuff is going to happen here :)</h3>
+				</div>
 
-					<h3></h3>
+				<div id="msg">
+					<p>Type anything you like</p>
+				</div>
 
-					<p></p>
+				<div id="textBox">
+					<input size="80" id="userIn" type="text" name="sentense">
+				</div>
 
-					<h3></h3>
+				<div class="result">
+					<h3>result</h3>
+				</div>
 
-					<p></p>
+				<div id="genNumCost">
 
-				</div>	
-			</article>
-
-			<aside class = "sideBox">
-					<div id="disqus_thread">
-						<script>
-							(function() { // DON'T EDIT BELOW THIS LINE
-							var d = document, s = d.createElement('script');
-
-							s.src = '//smartrobot.disqus.com/embed.js';
-
-							s.setAttribute('data-timestamp', +new Date());
-							(d.head || d.body).appendChild(s);
-							})();
-						</script>
-						<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+					<div id="numOfGen">
+						<p>3425767</p>
 					</div>
-			</aside>
+
+					<div id="cost">
+						<p>03</p>
+					</div>
+
+				</div>
+
+				<div id="run">
+					<h3>run</h3>
+				</div>
+
+
 		</main>
 
 		<footer class = "footBox">
 			<p>
-		  			Made by <a href="https://twitter.com/SiaFahim" target="_blank">Siavash Fahimi</a> for 
+		  			Made by <a href="https://twitter.com/SiaFahim" target="_blank">Siavash Fahimi</a> for
 		  			<a href="https://www.holbertonschool.com" target="_blank">Holberton School</a>.
 		  			<img src="https://www.holbertonschool.com/holberton-logo.png" height="42" width="100">
 			</p>
 		</footer>
-
-		<script id="dsq-count-scr" src="//smartrobot.disqus.com/count.js" async></script>
-	</body>
-
-	<!-- script for the widget to show social stuff-->
-	<script>
-	  (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
-	    t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
-	  })(window, document, '_gscq','script','//widgets.getsitecontrol.com/28662/script.js');
-	</script>
 
  </html>

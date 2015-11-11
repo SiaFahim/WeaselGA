@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -26,7 +26,7 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -90,7 +90,6 @@ footer {
 
 
 /* Text styles and margins */
-
 
 h1 {
 	font-size: 36px;
@@ -264,7 +263,78 @@ img.small {
 	margin-bottom: 5px;
 }
 
+/*styles for the sim page*/
 
+.sim{
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: center;
+	overflow-y: scroll;
+	background-color: rgba(247, 247, 247, 0.27);
+}
 
+#simHead{
+	margin: 0 auto;
+	padding: 50px 0px 50px 0px;
+}
+#msg{
+	margin: 0 auto;
+	padding: 25px 0px 10px 0px;
+}
+#textBox{
+	margin: 0 auto;
+	padding: 0px 0px 50px 0px;
+}
+.result{
+	width: 75%;
+	height: 40px;
+	background-color: rgba(243, 243, 243, 0.1);
+	margin: 0 auto;
+	padding: 50px 0px 50px 0px;
+	box-shadow: 0px 0px 3px 0px;
+	border-radius: 5px;
+}
 
+.result h3{
+	text-align: center;
+	vertical-align: middle;
+	font-size: 36px;
+	margin: 0;
+  padding: 0;
+}
 
+#genNumCost{
+	width: 75%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	padding-top: 5px;
+}
+#cost{
+	flex: 1;
+	/*background-color: rgba(252, 255, 232, 0.39);;*/
+	align-self: flex-end;
+	text-align: right;
+}
+#numOfGen{
+	flex: 2;
+	width: 100%;
+	/*background-color: rgb(244, 253, 248);*/
+	align-self: flex-start;
+}
+#run{
+	display: flex;
+	justify-content: center;
+	background-color: rgb(61, 193, 85);
+	width: 20%;
+	border-radius: 10px;
+	box-shadow:  0px 6px 20px -1px;
+	margin: 0 auto;
+	margin-top: 25px;
+	margin-bottom: 200px;
+}
+#run h3{
+	padding: 25px 35px 25px 35px;
+	margin: 0 auto;
+}
