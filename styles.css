@@ -153,6 +153,7 @@ img.small {
 header .right {
 	display: flex;
 	flex-direction: column;
+	margin: 2px -60px 0px 0px;
   	/*float: none;*/
   }
 
