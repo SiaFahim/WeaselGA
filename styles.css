@@ -151,7 +151,9 @@ img.small {
 }
 
 header .right {
-  	float: none;
+	display: flex;
+	flex-direction: column;
+  	/*float: none;*/
   }
 
 /*Special Styling*/
