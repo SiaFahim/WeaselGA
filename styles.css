@@ -150,6 +150,10 @@ img.small {
 	overflow: auto;
 }
 
+.right {
+  	float: none;
+  }
+
 /*Special Styling*/
 
 .bodyContainer{
