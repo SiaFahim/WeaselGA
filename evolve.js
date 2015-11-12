@@ -1,10 +1,10 @@
 window.onload = function(){
 	var TARGET = prompt ("Say something!" , "Hello World :)");
-	var POP_SIZE = 100; //population size.
-	var POP_SIZE_GROWTH_RATIO = 1.2;
-	var SURVIVAL_RATIO = 0.7;
+	var POP_SIZE = 1000; //population size.
+	var POP_SIZE_GROWTH_RATIO = 1.001;
+	var SURVIVAL_RATIO = 0.2;
 	var MUT_PROB = 0.1;
-	var GENE_MUT_PROB = 0.1;
+	var GENE_MUT_PROB = 0.05;
 	var SURVIVED_POP_SIZE = Math.floor((SURVIVAL_RATIO*POP_SIZE));
 	var CHARACTERS = [96, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 45, 61, 113, 119, 101, 114, 116, 121, 117,
 					105, 111, 112, 91, 93, 92, 97, 115, 100, 102, 103, 104, 106, 107, 108, 59, 39, 122, 120, 99, 118, 98, 110,
@@ -133,7 +133,7 @@ window.onload = function(){
 			pop[i].rightChrom = splitGenome(pop[i].Genome).rightChrom;
 		};
 		for (var i=0; i<POP_SIZE;++i){
-			var j = i % pop.length;
+			// var j = i % pop.length;
 			offSpring = getBusy()
 			newPop.push(brainWash(offSpring));
 		};
@@ -153,14 +153,20 @@ window.onload = function(){
 	};
 
 	var evolve = function(){
-
 			getTheFittest(pop);
 			while (pop[fittestLoc].Fitness < targetCharCode.length) {
 				if (genNum > END_FACTOR) {
 					break;
 				}
+				POP_SIZE = POP_SIZE*POP_SIZE_GROWTH_RATIO;
 				makeGeneration();
-				console.log ("The best of generation", genNum, "is", genomeToAnswer(pop[fittestLoc].Genome), "with cost value of", TARGET.length - pop[fittestLoc].Fitness);
+				console.log (
+					"Generation:",
+					 genNum, "Best candidate:  ", genomeToAnswer(pop[fittestLoc].Genome),
+					 "  Cost: ",
+					 TARGET.length - pop[fittestLoc].Fitness,
+					 " Population: ", pop.length
+				 );
 				document.getElementById("possibleAnswers").innerHTML = bestOfGeneration;
 				document.getElementById("numOfGen").innerHTML = genNum;
 				document.getElementById("cost").innerHTML = TARGET.length - pop[fittestLoc].Fitness;
@@ -175,5 +181,6 @@ window.onload = function(){
 			document.getElementById("numOfGen").innerHTML = genNum;
 	};
 	evolve();
+	// debugger
 	console.log (THE_ANSWER);
 };
