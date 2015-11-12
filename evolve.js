@@ -171,6 +171,8 @@ window.onload = function(){
 			console.log (bestOfGeneration);
 			var cost = TARGET.length - pop[fittestLoc].Fitness;
 			document.getElementById("possibleAnswers").innerHTML = THE_ANSWER;
+			document.getElementById("cost").innerHTML = TARGET.length - pop[fittestLoc].Fitness;
+			document.getElementById("numOfGen").innerHTML = genNum;
 	};
 	evolve();
 	console.log (THE_ANSWER);
