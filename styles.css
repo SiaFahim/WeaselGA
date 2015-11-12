@@ -150,7 +150,7 @@ img.small {
 	overflow: auto;
 }
 
-.right {
+header .right {
   	float: none;
   }
 
@@ -199,7 +199,7 @@ img.small {
 
 .imageBox{
 	flex: 1;
-	padding: 30px 45px 0px 390px;
+	padding: 30px 45px 0px 300px;
 }
 
 .mainContainer{
