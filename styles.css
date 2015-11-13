@@ -162,21 +162,21 @@ img.small {
 .titleBox{
 	flex: 1;
 	min-width: 260px;
-	margin-top: 20px;
+	margin: 35px 0px 0px 75px;
 }
 .titleBox h1{
 	color: #4B584D;
 	font-weight: 900;
 	font-size: 38px;
 	line-height: 32px;
-	padding: 25px 0px 0px 75px;
+	/*padding: 25px 0px 0px 75px;*/
 }
 
 .ulBox{
 	flex: 1;
 	list-style: none;
 	min-width: 100px;
-	margin-top: 40px;
+	margin-top: 30px;
 }
 
 .liFlex a {
