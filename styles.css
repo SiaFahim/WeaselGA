@@ -143,6 +143,15 @@ footer{
 
 footer p{
 	padding: 15px 15px 25px 0px;
+	font-family: 'Avenir', "Century Gothic", "sans-serif";
+	font-size: 17px
+	text-align: right;
+}
+footer a{
+	font-size: 17px;
+	font-style: none;
+	font-family: 'Avenir', "Century Gothic", "sans-serif";
+	font-weight: 400;
 }
 
 /*Special Styling*/
@@ -171,6 +180,7 @@ footer p{
 	font-weight: 900;
 	font-size: 38px;
 	line-height: 32px;
+	letter-spacing: 0px;
 	/*padding: 25px 0px 0px 75px;*/
 }
 
@@ -284,22 +294,34 @@ footer p{
 
 /*styles for the sim page*/
 
+
+
 .sim{
 	display: flex;
 	height: 100%;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: center;
 	overflow-y: scroll;
 	background-color: rgba(247, 247, 247, 0.27);
 }
 
-#simHead{
-	margin: 0 auto;
-	padding: 45px 0px 30px 0px;
+#box1{
+	height: 100%;
+	width: 70%;
+	margin: auto;
 }
 
-.simHead h3{
-	font-size: 19px;
+#simHead{
+	margin: 0 auto;
+	padding: 45px 0px 40px 5px;
+}
+
+#simHead h3{
+	font-size: 23px;
+	text-align: center;;
+	line-height: 1.5;
+	color: #333333;
+
 }
 
 #msg{
@@ -311,8 +333,9 @@ footer p{
 	padding: 0px 0px 50px 0px;
 }
 .result{
-	width: 75%;
-	height: 120px;
+	width: 100%;
+	min-width: 275px;
+	height: 83px;
 	background-color: rgba(212, 212, 212, 0.15);;
 	margin: 0 auto;
 	/*padding: 0px 0px 40px 0px;*/
@@ -320,27 +343,30 @@ footer p{
 	border-radius: 10px;
 }
 
-.result h3{
-	text-align: center;
+#possibleAnswers{
+	text-align: left;
 	vertical-align: middle;
-	margin-top: 10px;
-	font-size: 26px;
+	padding: 10px 0px 0px 7px;
+	font-size: 18px;
 	line-height: 1.5;
 	font-weight: 400;
+	color: #333333;
 }
 
 #genNumCost{
-	width: 75%;
+	width: 100%;
+	min-width: 275px;
 	margin: 0 auto;
 	display: flex;
-	display:-webkit-flex
 	flex-direction: row;
 	padding-top: 5px;
+	margin-left: 5px;
 }
 #costDiv{
 	flex: 1;
 	/*background-color: rgba(252, 255, 232, 0.39);;*/
 	align-self: flex-end;
+	margin-right: 5px;
 	text-align: right;
 }
 #numOfGen{
@@ -356,6 +382,7 @@ footer p{
 	/*background-color: rgb(169, 169, 169);*/
 	color: #4E4D4D;
 	width: 20%;
+	min-width: 75px;
 	border-radius: 5px;
 	box-shadow:  0px 1px 5px 0px;
 	margin: 0 auto;
@@ -371,6 +398,8 @@ footer p{
 }
 
 #temp{
-	padding: 0px 135px 0px 135px;
+	min-width: 275px;
+	padding: 0px 5px 0px 5px;
 	text-align: justify;
+	color: #6F6F6F;
 }
