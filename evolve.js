@@ -148,6 +148,7 @@ window.onload = function(){
 		return THE_ANSWER;
 	};
 
+
 	var evolve = function(){
 			getTheFittest(pop);
 			while (pop[fittestLoc].Fitness < targetCharCode.length) {
@@ -161,12 +162,13 @@ window.onload = function(){
 					 genNum, "Best candidate:", genomeToAnswer(pop[fittestLoc].Genome),
 					 "Cost:",
 					 TARGET.length - pop[fittestLoc].Fitness,
-					 " Population:", pop.length
+					 "Population:", pop.length
 				 );
-				document.getElementById("possibleAnswers").innerHTML = bestOfGeneration;
-				document.getElementById("numOfGen").innerHTML = genNum;
-				document.getElementById("cost").innerHTML = TARGET.length - pop[fittestLoc].Fitness;
-				// document.getElementById("cost").innerHTML = TARGET.length - pop[fittestLoc].Fitness;
+				// setInterval(function(){
+					document.getElementById("possibleAnswers").innerHTML = bestOfGeneration;
+					document.getElementById("numOfGen").innerHTML = genNum;
+					document.getElementById("cost").innerHTML = TARGET.length - pop[fittestLoc].Fitness;
+				// }, 1000);
 				getTheFittest(pop);
 				++genNum;
 			}
