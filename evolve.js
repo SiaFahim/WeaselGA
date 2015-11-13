@@ -1,5 +1,5 @@
 window.onload = function(){
-	var TARGET = prompt ("Say something!" , "METHINKS IT IS LIKE A WEASEL");
+	var TARGET = prompt ("Say something or feel lucky with Shakespeare!" , "Methinks it is like a weasel :)");
 	var POP_SIZE = 1000; //population size.
 	var POP_SIZE_GROWTH_RATIO = 1.001;
 	var SURVIVAL_RATIO = 0.2;
@@ -16,11 +16,7 @@ window.onload = function(){
 	var fittestLoc = 0;
 	var bestOfGeneration = [];
 
-	run.addEventListener("click", function(){
-		var TARGET = prompt ("Say something!" , "Hello World :)");
-		// var TARGET = document.getElementById("userIn");
-		evolve();
-	});
+
 
 	var getStrUniCode = function() {
 		var uniCode = [];
