@@ -3,7 +3,7 @@ window.onload = function(){
 	var POP_SIZE = 1000; //population size.
 	var POP_SIZE_GROWTH_RATIO = 1.001;
 	var SURVIVAL_RATIO = 0.2;
-	var MUT_PROB = 0.1;
+	var MUT_PROB = 0.2;
 	var GENE_MUT_PROB = 0.05;
 	var SURVIVED_POP_SIZE = Math.floor((SURVIVAL_RATIO*POP_SIZE));
 	var CHARACTERS = [96, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 45, 61, 113, 119, 101, 114, 116, 121, 117,
@@ -15,6 +15,8 @@ window.onload = function(){
 	var END_FACTOR = 300000;
 	var fittestLoc = 0;
 	var bestOfGeneration = [];
+	var delay = 33;
+
 
 
 
@@ -148,37 +150,33 @@ window.onload = function(){
 		return THE_ANSWER;
 	};
 
-
 	var evolve = function(){
-			getTheFittest(pop);
-			while (pop[fittestLoc].Fitness < targetCharCode.length) {
-				if (genNum > END_FACTOR) {
-					break;
-				}
-				POP_SIZE = POP_SIZE*POP_SIZE_GROWTH_RATIO;
-				makeGeneration();
-				console.log (
-					"Generation:",
-					 genNum, "Best candidate:", genomeToAnswer(pop[fittestLoc].Genome),
-					 "Cost:",
-					 TARGET.length - pop[fittestLoc].Fitness,
-					 "Population:", pop.length
-				 );
-				// setInterval(function(){
+		var intervalEvolve = function(){
+			var timer = setInterval(function(){
+				if (pop[fittestLoc].Fitness < targetCharCode.length && genNum <= END_FACTOR) {
+					POP_SIZE = POP_SIZE*POP_SIZE_GROWTH_RATIO;
+					makeGeneration();
+					console.log ("Generation:",genNum, "Best candidate:", genomeToAnswer(pop[fittestLoc].Genome),"Cost:",TARGET.length - pop[fittestLoc].Fitness,"Population:", pop.length);
 					document.getElementById("possibleAnswers").innerHTML = bestOfGeneration;
 					document.getElementById("numOfGen").innerHTML = genNum;
 					document.getElementById("cost").innerHTML = TARGET.length - pop[fittestLoc].Fitness;
-				// }, 1000);
-				getTheFittest(pop);
-				++genNum;
-			}
-			console.log (bestOfGeneration);
-			var cost = TARGET.length - pop[fittestLoc].Fitness;
-			document.getElementById("possibleAnswers").innerHTML = THE_ANSWER;
-			document.getElementById("cost").innerHTML = pop.length;
-			document.getElementById("numOfGen").innerHTML = genNum;
+					getTheFittest(pop);
+					++genNum;
+				}
+				else{
+					clearInterval(timer);
+					console.log (bestOfGeneration);
+					var cost = TARGET.length - pop[fittestLoc].Fitness;
+					document.getElementById("possibleAnswers").innerHTML = THE_ANSWER;
+					document.getElementById("cost").innerHTML = pop.length;
+					document.getElementById("numOfGen").innerHTML = genNum;
+				}
+			},delay);
+		}
+		getTheFittest(pop);		
+		intervalEvolve();
 	};
+	
 	evolve();
-	// debugger
 	console.log (THE_ANSWER);
 };

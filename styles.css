@@ -348,12 +348,13 @@ footer a{
 }
 
 #possibleAnswers{
-	text-align: left;
+	text-align: center;
 	vertical-align: middle;
-	padding: 10px 0px 0px 7px;
-	font-size: 18px;
+	padding: 25px 0px 0px 0px;
+	font-family: 'Lucida Console', "Monaco", "monospace";
+	font-size: 24px;
 	line-height: 1.5;
-	font-weight: 400;
+	font-weight: 500;
 	color: #333333;
 }
 
