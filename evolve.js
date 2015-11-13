@@ -1,5 +1,5 @@
 window.onload = function(){
-	var TARGET = prompt ("Say something!" , "Hello World :)");
+	var TARGET = prompt ("Say something!" , "METHINKS IT IS LIKE A WEASEL");
 	var POP_SIZE = 1000; //population size.
 	var POP_SIZE_GROWTH_RATIO = 1.001;
 	var SURVIVAL_RATIO = 0.2;
