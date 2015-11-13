@@ -199,8 +199,8 @@ img.small {
 .socialBox {
 	display: flex;
 	margin-left: auto;
-	flex-direction: column;
-	margin-right: -60px;
+	flex-direction: row;
+	flex-flow: row wrap;
   }
 
 .fb-share-button{
