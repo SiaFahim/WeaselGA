@@ -404,70 +404,7 @@ footer a{
 	color: #6F6F6F;
 }
 
-/*GitHub card styling*/
-
-@import "compass/css3";
-
-.card {
-  font-family: 'Avenir', "Century Gothic", "sans-serif";
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  width: 300px;
-  color: #333;
-  margin-left: 25px;
-
-  
-  a {
-    color: #cf3f02;
-    text-decoration: none;
-  }
-  
-  .card-header {
-    padding: 24px 16px;
-  }
-  
-  .card-header + .card-body {
-    margin-top: -24px;
-    padding-top: 0;
-  }
-  
-  .card-suptitle {
-    color: #aaa;
-    font-size: 14px;
-    line-height: 20px;
-    margin: 0;
-    position: relative;
-    text-transform: uppercase;
-  }
-
-  .card-title {
-    font-size: 20px;
-    line-height: 28px;
-    margin: 0;
-    
-     a,  a:visited {
-      color: inherit;
-    }
-  }
-  
-  .card-details {
-    border-top: 1px solid #ccc;
-    font-size: 14px;
-    line-height: 24px;
-    padding: 16px 16px;
-    margin: 24px 0;
-    
-    dt, dd {
-      float: left;
-    }
-    
-    dt {
-      padding-right: 8px;
-    }
-    
-    dd {
-      margin: 0;
-      padding-right: 16px;
-    }
-  }
+.gitcard{
+	margin-left: 25px;
 }
+
