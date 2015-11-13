@@ -187,7 +187,7 @@ img.small {
 
 .imageBox{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex: 1;
 }
 
@@ -200,6 +200,7 @@ img.small {
 	display: flex;
 	margin-left: auto;
 	flex-direction: column;
+	margin-right: -60px;
   }
 
 .fb-share-button{
