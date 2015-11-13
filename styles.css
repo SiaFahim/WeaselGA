@@ -165,14 +165,14 @@ footer a{
 .headContainer{
 	display: flex;
 	flex-direction: row;
-	min-width: 500px;
+	min-width: 475px;
 	background-color: rgba(245, 245, 245, 0.38);;
 	box-shadow: 0px 2px 6px -1px rgba(0, 0, 0, 0.51);
 }
 
 .titleBox{
 	flex: 1;
-	min-width: 260px;
+	min-width: 165px;
 	margin: 35px 0px 0px 75px;
 }
 .titleBox h1{
