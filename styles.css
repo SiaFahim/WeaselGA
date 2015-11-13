@@ -162,6 +162,7 @@ img.small {
 .titleBox{
 	flex: 1;
 	min-width: 260px;
+	margin-top: 20px;
 }
 .titleBox h1{
 	color: #4B584D;
@@ -175,7 +176,7 @@ img.small {
 	flex: 1;
 	list-style: none;
 	min-width: 100px;
-	padding-top: 5px;
+	margin-top: 40px;
 }
 
 .liFlex a {
@@ -193,6 +194,7 @@ img.small {
 
 .headImg{
 	margin-left: auto;
+	margin-top: 5px;
 	padding: 15px 35px 0px 0px;
 }
 
@@ -203,8 +205,12 @@ img.small {
 	flex-flow: row wrap;
   }
 
+.tweet{
+	padding: 4px 2px 0px 0px;
+}
+
 .fb-share-button{
-	margin: 0px 2px 2px 2px;
+	padding: 0px 2px 2px 0px;
 }
 
 .mainContainer{
