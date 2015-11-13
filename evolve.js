@@ -158,10 +158,10 @@ window.onload = function(){
 				makeGeneration();
 				console.log (
 					"Generation:",
-					 genNum, "Best candidate:  ", genomeToAnswer(pop[fittestLoc].Genome),
-					 "  Cost: ",
+					 genNum, "Best candidate:", genomeToAnswer(pop[fittestLoc].Genome),
+					 "Cost:",
 					 TARGET.length - pop[fittestLoc].Fitness,
-					 " Population: ", pop.length
+					 " Population:", pop.length
 				 );
 				document.getElementById("possibleAnswers").innerHTML = bestOfGeneration;
 				document.getElementById("numOfGen").innerHTML = genNum;
