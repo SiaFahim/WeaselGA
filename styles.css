@@ -137,13 +137,11 @@ img.small {
 
 footer{
 	background-color: #F5F5F5;
-	padding: 5px 0px 0px 75px;
 	margin-top: 2px;
-	align-self: flex-end;
 }
 
 footer p{
-	padding: 15px 15px 25px 0px;
+	padding: 15px 15px 25px 75px;
 	font-family: 'Avenir', "Century Gothic", "sans-serif";
 	font-size: 17px
 	text-align: right;
@@ -282,6 +280,11 @@ footer a{
 
 .sideBox p{
 	padding: 15px 15px 15px 15px;
+}
+
+.footBox{
+	align-self: flex-end;
+	width: 100%
 }
 
 .disqus_thread{
