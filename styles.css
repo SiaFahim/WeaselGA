@@ -214,6 +214,7 @@ footer a{
 	margin-left: auto;
 	flex-direction: row;
 	flex-wrap: wrap;
+	margin-top: auto;
   }
 
 .tweet{
