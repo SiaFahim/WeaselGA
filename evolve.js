@@ -15,7 +15,7 @@ window.onload = function(){
 	var END_FACTOR = 300000;
 	var fittestLoc = 0;
 	var bestOfGeneration = [];
-	var delay = 0;
+	var delay = 5;
 
 
 
