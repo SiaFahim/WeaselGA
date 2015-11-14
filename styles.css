@@ -143,14 +143,14 @@ footer{
 footer p{
 	padding: 15px 15px 25px 0px;
 	font-family: 'Avenir', "Century Gothic", "sans-serif";
-	font-size: 17px
+	font-size: 16px
 	text-align: right;
+	margin-left: 75px;
 }
 footer a{
-	font-size: 17px;
+	font-size: 16px;
 	font-style: none;
 	font-family: 'Avenir', "Century Gothic", "sans-serif";
-	font-weight: 400;
 }
 
 /*Special Styling*/
@@ -187,7 +187,7 @@ footer a{
 	flex: 1;
 	list-style: none;
 	min-width: 100px;
-	margin-top: 30px;
+	margin-top: 32px;
 }
 
 .liFlex a {
@@ -241,7 +241,7 @@ footer a{
 }
 
 #smart_thumbnail{
-	padding: 0px 82px 0px 65px;
+	padding: 35px 82px 0px 65px;
 }
 
 .articleBox p{
@@ -253,6 +253,8 @@ footer a{
 
 .articleBox h3{
     padding: 20px 0px 0px 75px;
+    font-size: 24px;
+    line-height: 1.5em;
 }
 
 #articleTitle{
@@ -367,6 +369,7 @@ footer a{
 	padding-top: 5px;
 	margin-left: 5px;
 }
+
 #costDiv{
 	flex: 1;
 	/*background-color: rgba(252, 255, 232, 0.39);;*/
@@ -374,12 +377,23 @@ footer a{
 	margin-right: 5px;
 	text-align: right;
 }
+
+#cost{
+	font-family: 'Lucida Console', "Monaco", "monospace";
+	font-weight: 900;
+	font-size: 20px;
+}
+
 #numOfGen{
 	flex: 2;
 	width: 100%;
 	/*background-color: rgb(244, 253, 248);*/
 	align-self: flex-start;
+	font-family: 'Lucida Console', "Monaco", "monospace";
+	font-weight: 900;
+	font-size: 20px;
 }
+
 #run{
 	display: flex;
 	justify-content: center;

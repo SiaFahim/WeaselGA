@@ -1,4 +1,1 @@
-$(document).ready(function(){
-//
-//
-});
+
