@@ -1,9 +1,9 @@
 window.onload = function(){
 	var TARGET = prompt ("Say something or feel lucky with Shakespeare!" , "methinks it is like a weasel :)");
-	var POP_SIZE = 100; //population size.
+	var POP_SIZE = 300; //population size.
 	var POP_SIZE_GROWTH_RATIO = 1;
 	var SURVIVAL_RATIO = 0.4;
-	var MUT_PROB = 0.2;
+	var MUT_PROB = 0.1;
 	var GENE_MUT_PROB = 0.1;
 	var SURVIVED_POP_SIZE = Math.floor((SURVIVAL_RATIO*POP_SIZE));
 	var CHARACTERS = [96, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 45, 61, 113, 119, 101, 114, 116, 121, 117,
@@ -15,10 +15,7 @@ window.onload = function(){
 	var END_FACTOR = 300000;
 	var fittestLoc = 0;
 	var bestOfGeneration = [];
-	var delay = 5;
-
-
-
+	var delay = 20;
 
 	var getStrUniCode = function() {
 		var uniCode = [];
