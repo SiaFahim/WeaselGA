@@ -296,6 +296,7 @@ footer a{
 .codeSideBox{
 	display: flex;
 	flex: 1;
+	min-height: 300px;
 	flex-direction: row;
 	justify-content: space-around;
 	background-color: rgba(247, 247, 247, 0.27);
