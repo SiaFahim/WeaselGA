@@ -292,7 +292,7 @@ footer a{
 
 .codeSideBox{
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	height: 20%
 	background-color: rgba(247, 247, 247, 0.27);
   	margin-top: 1px;
