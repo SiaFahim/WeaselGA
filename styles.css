@@ -301,7 +301,7 @@ footer a{
 	justify-content: space-around;
 	background-color: rgba(247, 247, 247, 0.27);
   	margin: 2px 0px 2px 0px;
-  	overflow-y: scroll;
+  	/*overflow-y: scroll;*/
   	padding: 15px 20px 80px 20px;
 }
 .sideBox p{
