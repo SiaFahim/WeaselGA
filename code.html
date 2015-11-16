@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+
+<html>
+
+	<head>
+  		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  		<link rel="stylesheet" type="text/css" href="styles.css">
+  		<link rel="shortcut icon" href="/images/favicon.ico" >
+  		<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  		<link rel="import" href="gitcard.html" >
+  		<script src="behavior.js"></script>
+  		<title>genetic algorithm</title>
+ 	</head>
+
+ 	<body class= "bodyContainer">
+ 		<div id="fb-root"><script>(function(d, s, id) {
+					  var js, fjs = d.getElementsByTagName(s)[0];
+					  if (d.getElementById(id)) return;
+					  js = d.createElement(s); js.id = id;
+					  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+					  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
+		</div>	
+		
+		<header class = "headContainer">
+			<div class="titleBox"><h1>genetic<br>algorithm</h1></div>
+			<ul class="ulBox">
+				<li class="liFlex"><a href="index.html">about</a></li>
+				<li class="liFlex"><a href="algorithm.html">algorithm</a></li>
+				<li class="liFlex"><a href="code.html">code</a></li>
+				<li class="liFlex"><a href="sim.html">simulator</a></li>
+			</ul>
+			<div class="imageBox">	
+				<div class="headImg">
+					<a href="https://en.wikipedia.org/wiki/Weasel_program">
+						<img src="/images/RoboHead.png" alt="Smiley face" height="80" width="100" >
+					</a>
+					
+				</div>
+				<div class="socialBox">
+					
+					<div class="fb-share-button" data-href="http://173.246.107.7/index.html" data-layout="button">
+					</div>
+
+					<div class="tweet">
+						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://173.246.107.7/index.html" data-via="SiaFahim" data-count="none" data-hashtags="GeneticAlgorithm"></a>
+
+						<script>!function(d,s,id){
+							var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+						</script>
+					</div>
+					
+				</div>	
+			</div>
+		</header>
+
+		<main class="codeMainContainer">
+			<article class = "articleBox">
+				<header>
+					<h3 id="articleTitle">Genetic Algorithm in JavaScript</h3>
+				</header>
+
+				<div id="content">
+					<p>I will be very brief about every code block, although I'd like to explain more, but I won't have enough time at this moment.</p>
+
+					<p>I defined constant parameters of this algorithm on top of all the other functions so they can access these variables whenever they need them. These parameters can change performance of algorithm </p>
+					<img src="/images/sc01.png" class="pic" width="85%">
+
+					<p>this function will find UniCode of user input and returns targetCharCode as an array.</p>
+					<img src="/images/sc02.png" class="pic" width="85%">
+
+					<p>this function will convert its variable from UniCode to printable characters and returns a joined string.</p>
+					<img src="/images/sc03.png" class="pic" width="85%">
+
+					<p>this function generates a random combination of all printable characters with the length of user input. This possible answer is called Genome which is a member of our population</p>
+					<img src="/images/sc04.png" class="pic" width="85%">
+
+					<p>this function gets a Genome and calculates its fitness to the target or the user input by giving +1 score per each letter in the correct location.</p>
+					<img src="/images/sc05.png" class="pic" width="85%">
+
+					<p>in this function initial population with size of POP_SIZE will be generated. Each member of this population is an object with two properties of Fitness which stores the fitness score and the Genome which stores possible answer as an array.</p>
+					<img src="/images/sc06.png" class="pic" width="85%">
+
+					<p>this function turns every new offspring into an object with its properties and ads them into the population as new members. Very much like what school does in human society which prepares offsprings to get integrated into our society.</p>
+					<img src="/images/sc07.png" class="pic" width="85%">
+
+					<p>this function splits every genome from the middle point to generate two chromosoms and adds these new arrays as two new properties (rChrome and lChrome) of the parentObject. </p>
+					<img src="/images/sc08.png" class="pic" width="85%">
+
+					<p>mate function picks a random left chromosome and a random right chromosome and joins them together to create an offspring.</p>
+					<img src="/images/sc09.png" class="pic" width="85%">
+
+					<p>if we consider every possible sentense a Genome, then every letters could be a Gene, in this function random Genes of randomly selected Genome will be mutated in which that letter will be replaced with another random letter. This doesn't happen to all the genes, but only to GENE_MUT_PROB % of the genes.</p>
+					<img src="/images/sc10.png" class="pic" width="85%">
+
+					<p>this function will apply mutateGene function to MUT_PROB % of the population.</p>
+					<img src="/images/sc11.png" class="pic" width="85%">
+
+					<p>this function kills those members of pop with lowest fitness score.</p>
+					<img src="/images/sc12.png" class="pic" width="85%">
+
+					<p>this function will call most of above functions every generation until it finds the optimal solution.</p>
+					<img src="/images/sc13.png" class="pic" width="85%">
+
+					<p>this function finds the fittest of each generation.</p>
+					<img src="/images/sc14.png" class="pic" width="85%">
+
+					<p>and finally this is the last function which starts the whole process and outputs the result.</p>
+					<img src="/images/sc15.png" class="pic" width="85%">
+
+					<p>Here is my <a href="https://github.com/SiaFahim/WeaselGA">GitHub</a> repo for this project.</p>
+				</div>
+			</article>
+
+			<!-- <aside class = "codeSideBox">
+				<div id="disqus_thread">
+					<script>
+						(function() { // DON'T EDIT BELOW THIS LINE
+						var d = document, s = d.createElement('script');
+
+						s.src = '//smartrobot.disqus.com/embed.js';
+
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+						})();
+					</script>
+					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+				</div>
+				<github-card class:"gitcard" user="siafahim"></github-card>
+				
+			</aside> -->
+		</main>
+
+		<footer class = "footBox">
+			<p>
+		  			made by <a href="https://twitter.com/SiaFahim" target="_blank">siavash fahimi</a> for
+		  			<a href="https://www.holbertonschool.com" target="_blank">holberton school</a>.
+		  			<img src="https://www.holbertonschool.com/holberton-logo.png" height="42" width="100">
+			</p>
+		</footer>
+
+		<script id="dsq-count-scr" src="//smartrobot.disqus.com/count.js" async></script>
+	</body>
+
+	<!-- script for the widget to show social stuff-->
+	<script>
+	  (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
+	    t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
+	  })(window, document, '_gscq','script','//widgets.getsitecontrol.com/28662/script.js');
+	</script>
+
+ </html>

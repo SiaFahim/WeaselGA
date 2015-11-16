@@ -1,0 +1,453 @@
+html, body {
+	height: 100%;
+	min-height: 100%;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*Default styles for page elements*/
+
+/* Fonts and colors */
+
+body {
+	font-family: 'Avenir', "Century Gothic", "sans-serif";
+	color: rgba(0, 0, 0, 0.8);
+	line-height: 1.5em;
+
+
+}
+
+h1, h2, h3, h4, h5, h6, header {
+	font-family: 'Avenir', "Century Gothic", "sans-serif";
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+footer a {
+	color: rgba(0, 0, 0, 0.8);
+}
+
+a {
+	color: #262626;
+	font-size: 18px;
+}
+
+/* Positioning and margins */
+
+@media (min-width: 1100px) {
+	body {
+		width: 1100px;
+		margin: 0 auto;
+	}
+}
+
+/* Text styles and margins */
+
+h1 {
+	font-size: 36px;
+	font-weight: 100;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 28px;
+}
+
+h4 {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+h5 {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+h6 {
+	font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  body {
+  	display: block;
+  }
+
+  body main {
+  	display: block;
+  }
+
+  header.socialBox {
+  	float: none;
+  }
+}
+
+/* image JS challenge */
+
+img {
+	max-width: 100%;
+}
+
+img.small {
+	width: 100px;
+	overflow: auto;
+}
+
+footer{
+	background-color: #F5F5F5;
+	margin-top: 2px;
+}
+
+footer p{
+	padding: 15px 15px 25px 0px;
+	font-family: 'Avenir', "Century Gothic", "sans-serif";
+	font-size: 16px
+	text-align: right;
+	margin-left: 75px;
+}
+footer a{
+	font-size: 16px;
+	font-style: none;
+	font-family: 'Avenir', "Century Gothic", "sans-serif";
+}
+
+.pic{
+	margin-left: 75px;
+}
+
+/*Special Styling*/
+
+.bodyContainer{
+	display: flex;
+  	flex-direction: column;
+  	background-color: #FFFFFF;
+}
+
+.headContainer{
+	display: flex;
+	flex-direction: row;
+	min-width: 475px;
+	background-color: rgba(245, 245, 245, 0.38);;
+	box-shadow: 0px 2px 6px -1px rgba(0, 0, 0, 0.51);
+}
+
+.titleBox{
+	flex: 1;
+	min-width: 165px;
+	margin: 35px 0px 0px 75px;
+}
+.titleBox h1{
+	color: #4B584D;
+	font-weight: 900;
+	font-size: 38px;
+	line-height: 32px;
+	letter-spacing: 0px;
+	/*padding: 25px 0px 0px 75px;*/
+}
+
+.ulBox{
+	flex: 1;
+	list-style: none;
+	min-width: 100px;
+	margin-top: 32px;
+}
+
+.liFlex a {
+	color: #696969;
+	line-height: 0;
+	font-weight: 400;
+	text-decoration: none;
+}
+
+.imageBox{
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.headImg{
+	margin-left: auto;
+	margin-top: 5px;
+	padding: 15px 35px 0px 0px;
+}
+
+.socialBox {
+	display: flex;
+	margin-left: auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: auto;
+  }
+
+.tweet{
+	padding: 4px 5px 0px 5px;
+}
+
+.fb-share-button{
+	padding: 0px 3px 2px 5px;
+}
+
+.mainContainer{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	max-height: 100%;
+}
+
+.codeMainContainer{
+	display: flex;
+	flex-direction: column;
+	max-height: 100%;
+}
+.articleBox{
+	flex: 2;
+	min-width: 475px;
+	background-color: rgba(247, 247, 247, 0.27);
+  	margin-top: 1px;
+ 	margin-right: 1px;
+  	overflow-y: scroll;
+}
+
+#smart_thumbnail{
+	padding: 35px 82px 0px 65px;
+}
+
+.articleBox p{
+	padding: 25px 75px 25px 75px;
+	line-height: 1.7;
+	overflow-y: scroll;
+	text-align: justify;
+}
+
+.articleBox h3{
+    padding: 20px 0px 0px 75px;
+    font-size: 24px;
+    line-height: 1.5em;
+}
+
+#articleTitle{
+	padding: 50px 35px 35px 65px;
+}
+
+.articleBox ul{
+	padding: 10px 0px 10px 100px;
+}
+
+#lastP{
+	padding-bottom: 420px;
+}
+
+.sideBox{
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	background-color: rgba(247, 247, 247, 0.27);
+  	margin-top: 1px;
+  	margin-left: 1px;
+  	overflow-y: scroll;
+  	padding: 35px 20px 20px 20px;
+}
+
+/*#content{
+	flex: 2;
+}
+.codeSideBox{
+	display: flex;
+	flex: 1;
+	min-height: 420px;
+	flex-direction: row;
+	justify-content: space-around;
+	background-color: rgba(247, 247, 247, 0.27);
+  	margin: 2px 0px 2px 0px;
+  	overflow-y: scroll;
+  	padding: 15px 20px 80px 20px;
+}*/
+.sideBox p{
+	padding: 15px 15px 15px 15px;
+}
+
+.footBox{
+	align-self: flex-end;
+	width: 100%;
+}
+
+.disqus_thread{
+}
+
+/*Git-Hub card styling*/
+
+#gitBox{
+	padding: 15px 15px 35px 15px;
+}
+
+/*styles for the sim page*/
+
+
+
+.sim{
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: center;
+	overflow-y: scroll;
+	background-color: rgba(247, 247, 247, 0.27);
+}
+
+#box1{
+	height: 100%;
+	width: 70%;
+	margin: auto;
+}
+
+#simHead{
+	margin: 0 auto;
+	padding: 45px 0px 40px 5px;
+}
+
+#simHead h3{
+	font-size: 23px;
+	text-align: center;;
+	line-height: 1.5;
+	color: #333333;
+
+}
+
+#msg{
+	margin: 0 auto;
+	padding: 25px 0px 10px 0px;
+}
+#textBox{
+	margin: 0 auto;
+	padding: 0px 0px 50px 0px;
+}
+.result{
+	width: 100%;
+	min-width: 275px;
+	height: 83px;
+	background-color: rgba(212, 212, 212, 0.15);;
+	margin: 0 auto;
+	/*padding: 0px 0px 40px 0px;*/
+	/*box-shadow: 0px 0px 3px 0px;*/
+	border-radius: 10px;
+}
+
+#possibleAnswers{
+	text-align: center;
+	vertical-align: middle;
+	padding: 25px 0px 0px 0px;
+	font-family: 'Lucida Console', "Monaco", "monospace";
+	font-size: 24px;
+	line-height: 1.5;
+	font-weight: 500;
+	color: #333333;
+}
+
+#genNumCost{
+	width: 100%;
+	min-width: 275px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	padding-top: 5px;
+	margin-left: 5px;
+}
+
+#costDiv{
+	flex: 1;
+	/*background-color: rgba(252, 255, 232, 0.39);;*/
+	align-self: flex-end;
+	margin-right: 5px;
+	text-align: right;
+}
+
+#cost{
+	font-family: 'Lucida Console', "Monaco", "monospace";
+	font-weight: 900;
+	font-size: 20px;
+}
+
+#numOfGen{
+	flex: 2;
+	width: 100%;
+	/*background-color: rgb(244, 253, 248);*/
+	align-self: flex-start;
+	font-family: 'Lucida Console', "Monaco", "monospace";
+	font-weight: 900;
+	font-size: 20px;
+}
+
+#run{
+	display: flex;
+	justify-content: center;
+	background-color: rgb(107, 208, 120);
+	/*background-color: rgb(169, 169, 169);*/
+	color: #4E4D4D;
+	width: 20%;
+	min-width: 75px;
+	border-radius: 5px;
+	box-shadow:  0px 1px 5px 0px;
+	margin: 0 auto;
+	margin-top: 25px;
+	margin-bottom: 30px;
+	
+}
+#run a{
+	padding: 15px 35px 15px 35px;
+	margin: 0 auto;
+	font-size: 23px;
+	text-decoration: none;
+}
+
+#temp{
+	min-width: 275px;
+	padding: 0px 5px 0px 5px;
+	text-align: justify;
+	color: #6F6F6F;
+}
+
+.gitcard{
+	margin-left: 25px;
+}
+

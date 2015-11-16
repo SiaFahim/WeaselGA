@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+  		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  		<link rel="stylesheet" type="text/css" href="styles.css">
+  		<link rel="shortcut icon" href="/images/favicon.ico" >
+  		<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+		<script src="jquery-2.1.4.js"></script>
+		<script src="evolve.js"></script>
+		<script src="jquery_functions.js"></script>
+  		<title>genetic algorithm</title>
+ 	</head>
+
+	<body class= "bodyContainer">
+		<div id="fb-root"><script>(function(d, s, id) {
+					  var js, fjs = d.getElementsByTagName(s)[0];
+					  if (d.getElementById(id)) return;
+					  js = d.createElement(s); js.id = id;
+					  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+					  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
+		</div>	
+		
+		<header class = "headContainer">
+			<div class="titleBox"><h1>genetic<br>algorithm</h1></div>
+			<ul class="ulBox">
+				<li class="liFlex"><a href="index.html">about</a></li>
+				<li class="liFlex"><a href="algorithm.html">algorithm</a></li>
+				<li class="liFlex"><a href="code.html">code</a></li>
+				<li class="liFlex"><a href="sim.html">simulator</a></li>
+			</ul>
+			<div class="imageBox">	
+				<div class="headImg">
+					<a href="https://en.wikipedia.org/wiki/Weasel_program">
+						<img src="/images/RoboHead.png" alt="Smiley face" height="80" width="100" >
+					</a>
+					
+				</div>
+				<div class="socialBox">
+					
+					<div class="fb-share-button" data-href="http://173.246.107.7/index.html" data-layout="button">
+					</div>
+
+					<div class="tweet">
+						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://173.246.107.7/index.html" data-via="SiaFahim" data-count="none" data-hashtags="GeneticAlgorithm"></a>
+
+						<script>!function(d,s,id){
+							var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+						</script>
+					</div>
+					
+				</div>	
+			</div>
+		</header>
+
+		<main class="sim">
+			<div id="box1">
+				<div id="simHead">
+					<h3>keep calm and evolve!</h3>
+				</div>
+
+				<!-- <div id="msg">
+					<p>Type anything you like</p>
+				</div> -->
+
+				<!-- <div id="textBox">
+					<input size="80" id="userIn" type="text" name="sentense">
+				</div> -->
+
+				<div class="result">
+					<h3 id="possibleAnswers"></h3>
+				</div>
+
+				<div id="genNumCost">
+
+					<div>
+						<p>number of generations:</p><p id="numOfGen">0</p>
+					</div>
+
+					<div id="costDiv">
+						<p>cost:</p> <p id="cost">0</p>
+					</div>
+				</div>
+
+				<div id="run">
+					<a href="sim.html">evolve</a>
+					<!-- href="sim.html" -->
+				</div>
+					
+				<p id="temp">
+					This page is under construction. The evolve button only refreshes this page.
+					You can run the algorithm by page refresh or clicking on <strong>evolve</strong>.
+					If you like to watch process of evolution on random letters until it evolves to your input,
+					then open the javascript console in your browser by pressing
+					<strong>alt + command/ control + i</strong>.
+					<br>Enjoy evolving ;)
+				</p>
+			</div>
+		</main>
+
+		<footer>
+			<p>
+	  			made by <a href="https://twitter.com/SiaFahim" target="_blank">siavash fahimi</a> for
+	  			<a href="https://www.holbertonschool.com" target="_blank">holberton school</a>.
+	  			<img src="https://www.holbertonschool.com/holberton-logo.png" height="42" width="100">
+			</p>
+		</footer>
+
+ </html>
