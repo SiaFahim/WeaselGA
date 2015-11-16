@@ -111,11 +111,11 @@ h6 {
 }
 
 @media (max-width: 800px) {
-  body.works_on_smartphone {
+  body {
   	display: block;
   }
 
-  body.works_on_smartphone main {
+  body main {
   	display: block;
   }
 
@@ -151,6 +151,10 @@ footer a{
 	font-size: 16px;
 	font-style: none;
 	font-family: 'Avenir', "Century Gothic", "sans-serif";
+}
+
+.pic{
+	margin-left: 75px;
 }
 
 /*Special Styling*/
@@ -232,6 +236,11 @@ footer a{
 	max-height: 100%;
 }
 
+.codeMainContainer{
+	display: flex;
+	flex-direction: column;
+	max-height: 100%;
+}
 .articleBox{
 	flex: 2;
 	min-width: 475px;

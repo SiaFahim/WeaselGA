@@ -11,7 +11,7 @@
   		<title>genetic algorithm</title>
  	</head>
 
- 	<body class= "bodyContainer" class="works_on_smartphone">
+ 	<body class= "bodyContainer">
  		<div id="fb-root"><script>(function(d, s, id) {
 					  var js, fjs = d.getElementsByTagName(s)[0];
 					  if (d.getElementById(id)) return;
@@ -23,7 +23,7 @@
 		<header class = "headContainer">
 			<div class="titleBox"><h1>genetic<br>algorithm</h1></div>
 			<ul class="ulBox">
-				<li class="liFlex"><a href="index.html">home</a></li>
+				<li class="liFlex"><a href="index.html">about</a></li>
 				<li class="liFlex"><a href="algorithm.html">algorithm</a></li>
 				<li class="liFlex"><a href="code.html">code</a></li>
 				<li class="liFlex"><a href="sim.html">simulator</a></li>
@@ -52,23 +52,62 @@
 			</div>
 		</header>
 
-		<main class="mainContainer">
+		<main class="codeMainContainer">
 			<article class = "articleBox">
 				<header>
-					<h3 id="articleTitle">genetic algorithm in JavaScript</h3>
+					<h3 id="articleTitle">Genetic Algorithm in JavaScript</h3>
 				</header>
 
 				<div id="content">
-					<p>In this section I will explain how I wrote the genetic algorithm in javascript and I will share the code for the algorithm :) </p>
-
-
 					<h3></h3>
 
-					<p></p>
+					<p>I will be very brief about every code block, although I'd like to explain more, but I won't have enough time at this moment.</p>
 
-					<h3></h3>
+					<p>I defined constant parameters of this algorithm on top of all the other functions so they can access these variables whenever they need them. These parameters can change performance of algorithm </p>
+					<img src="sc01.png" class="pic" width="85%">
 
-					<p></p>
+					<p>this function will find UniCode of user input and returns targetCharCode as an array.</p>
+					<img src="sc02.png" class="pic" width="85%">
+
+					<p>this function will convert its variable from UniCode to printable characters and returns a joined string.</p>
+					<img src="sc03.png" class="pic" width="85%">
+
+					<p>this function generates a random combination of all printable characters with the length of user input. This possible answer is called Genome which is a member of our population</p>
+					<img src="sc04.png" class="pic" width="85%">
+
+					<p>this function gets a Genome and calculates its fitness to the target or the user input by giving +1 score per each letter in the correct location.</p>
+					<img src="sc05.png" class="pic" width="85%">
+
+					<p>in this function initial population with size of POP_SIZE will be generated. Each member of this population is an object with two properties of Fitness which stores the fitness score and the Genome which stores possible answer as an array.</p>
+					<img src="sc06.png" class="pic" width="85%">
+
+					<p>this function turns every new offspring into an object with its properties and ads them into the population as new members. Very much like what school does in human society which prepares offsprings to get integrated into our society.</p>
+					<img src="sc07.png" class="pic" width="85%">
+
+					<p>this function splits every genome from the middle point to generate two chromosoms and adds these new arrays as two new properties (rChrome and lChrome) of the parentObject. </p>
+					<img src="sc08.png" class="pic" width="85%">
+
+					<p>mate function picks a random left chromosome and a random right chromosome and joins them together to create an offspring.</p>
+					<img src="sc09.png" class="pic" width="85%">
+
+					<p>if we consider every possible sentense a Genome, then every letters could be a Gene, in this function random Genes of randomly selected Genome will be mutated in which that letter will be replaced with another random letter. This doesn't happen to all the genes, but only to GENE_MUT_PROB % of the genes.</p>
+					<img src="sc10.png" class="pic" width="85%">
+
+					<p>this function will apply mutateGene function to MUT_PROB % of the population.</p>
+					<img src="sc11.png" class="pic" width="85%">
+
+					<p>this function kills those members of pop with lowest fitness score.</p>
+					<img src="sc12.png" class="pic" width="85%">
+
+					<p>this function will call most of above functions every generation until it finds the optimal solution.</p>
+					<img src="sc13.png" class="pic" width="85%">
+
+					<p>this function finds the fittest of each generation.</p>
+					<img src="sc14.png" class="pic" width="85%">
+
+					<p>and finally this is the last function which starts the whole process and outputs the result.</p>
+					<img src="sc15.png" class="pic" width="85%">
+
 
 				</div>
 			</article>
