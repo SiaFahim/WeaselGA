@@ -169,6 +169,7 @@ footer a{
 	display: flex;
 	flex-direction: row;
 	min-width: 475px;
+    min-height: 135px;
 	background-color: rgba(245, 245, 245, 0.38);;
 	box-shadow: 0px 2px 6px -1px rgba(0, 0, 0, 0.51);
 }
@@ -184,7 +185,11 @@ footer a{
 	font-size: 38px;
 	line-height: 32px;
 	letter-spacing: 0px;
+    
 	/*padding: 25px 0px 0px 75px;*/
+}
+.titleBox a{
+    text-decoration: none;
 }
 
 .ulBox{
@@ -257,7 +262,7 @@ footer a{
 .articleBox p{
 	padding: 25px 75px 25px 75px;
 	line-height: 1.7;
-	overflow-y: scroll;
+	/*overflow-y: scroll;*/
 	text-align: justify;
 }
 
