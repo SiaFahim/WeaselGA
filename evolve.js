@@ -1,6 +1,6 @@
 window.onload = function(){
 	var TARGET = prompt ("Say something or feel lucky with Shakespeare!" , "methinks it is like a weasel :)");
-	var POP_SIZE = 1000; //population size.
+	var POP_SIZE = 100; //population size.
 	var POP_SIZE_GROWTH_RATIO = 1.00001;
 	var SURVIVAL_RATIO = 0.1;
 	var MUT_PROB = 1;
